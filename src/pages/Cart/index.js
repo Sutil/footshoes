@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { formatPrice } from '../../util/format';
 import {
   MdRemoveCircleOutline,
   MdAddCircleOutline,
@@ -9,7 +10,7 @@ import {
 import { Container, ProductTable, Total } from './styles';
 import * as CartActions from '../../store/modules/cart/actions';
 
-function Cart({ cart, removeFromCart, updateAmount }) {
+function Cart({ cart, total, removeFromCart, updateAmount }) {
 
   function increment(product) {
     updateAmount(product.id, product.amount + 1);
@@ -42,8 +43,8 @@ function Cart({ cart, removeFromCart, updateAmount }) {
               />
             </td>
             <td>
-              <strong>{product.formattedPrice}</strong>
-              <span>R$ 29,90</span>
+              <strong>{product.title}</strong>
+              <span>{product.formattedPrice}</span>
             </td>
             <td>
               <div>
@@ -57,7 +58,7 @@ function Cart({ cart, removeFromCart, updateAmount }) {
               </div>
             </td>
             <td>
-              <strong>R$ 59,80</strong>
+              <strong>{product.subTotal}</strong>
             </td>
             <td>
               <button type="button" onClick={() => removeFromCart(product.id)} >
@@ -72,7 +73,7 @@ function Cart({ cart, removeFromCart, updateAmount }) {
         <button type="button">Finalizar pedido</button>
         <Total>
           <span>TOTAL</span>
-          <strong>R$ 1850,00</strong>
+          <strong>{ total }</strong>
         </Total>
       </footer>
     </Container>
@@ -80,7 +81,15 @@ function Cart({ cart, removeFromCart, updateAmount }) {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart.map(product => ({
+    ...product,
+    subTotal: formatPrice(product.amount * product.price),
+  })),
+  total: formatPrice(
+    state.cart.reduce((total, product) => {
+      return total + product.amount * product.price;
+    }, 0)
+  ),
 });
 
 const mapDispatchToProps = dispatch =>
