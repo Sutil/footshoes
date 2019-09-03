@@ -29,8 +29,8 @@ export const Cart = styled(Link)`
     }
 
     span {
-      font-size: 12px;
-      color: #999;
+      font-size: 14px;
+      color: #ff8b0d;
     }
   }
 `;

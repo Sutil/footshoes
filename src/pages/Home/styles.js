@@ -53,6 +53,7 @@ export const ProductList = styled.ul`
         align-items: center;
         padding: 12px;
         background: rgba(0, 0, 0, 0.1);
+        color: #ff8b0d;
 
         svg {
           margin-right: 5px;
