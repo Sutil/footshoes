@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { MdShoppingBasket } from 'react-icons/md';
 import { Container, Cart } from './styles';
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/images/logo.png';
 
 function Header({ cartSize }) {
   return (
