@@ -26,7 +26,7 @@ ReactJS project to study of:
 
 ```
 yarn global add json-server
-yarn json-server server.json -p 3333
+json-server server.json -p 3333
 ```
 
 Open other terminal and run:
