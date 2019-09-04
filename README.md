@@ -4,6 +4,8 @@
 
 ![demontration](./image-readme.gif)
 
+# Languages
+
 [English](#English)
 
 [Português](#Português)
@@ -28,7 +30,7 @@ ReactJS project to study of:
 
 ```
 yarn global add json-server
-yarn json-server server.json -p 3333
+json-server server.json -p 3333
 ```
 
 Open other terminal and run:
@@ -59,7 +61,7 @@ Projeto em ReactJS para estudos de:
 
 ```
 yarn global add json-server
-yarn json-server server.json -p 3333
+json-server server.json -p 3333
 ```
 
 Em outro terminar, executar
