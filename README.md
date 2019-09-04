@@ -16,6 +16,8 @@ ReactJS project to study of:
 * E-commerce concepts;
 * Redux;
 * Redux Saga;
+* React Hooks;
+* React Redux Hooks;
 * Routes;
 * Backend mock with json-server;
 * Reactotron;
@@ -45,6 +47,8 @@ Projeto em ReactJS para estudos de:
 * Conceitos de e-commerce;
 * Redux;
 * Redux Saga;
+* React Hooks;
+* React Redux Hooks;
 * Rotas;
 * Mock de backend com json-server;
 * Reactotron;
