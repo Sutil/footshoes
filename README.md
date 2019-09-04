@@ -57,7 +57,7 @@ Projeto em ReactJS para estudos de:
 
 ```
 yarn global add json-server
-yarn json-server server.json -p 3333
+json-server server.json -p 3333
 ```
 
 Em outro terminar, executar
